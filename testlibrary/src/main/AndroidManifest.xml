@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.zxwl.testlibrary"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity android:name=".SetUrlActivity">
+        </activity>
+    </application>
+
+</manifest>

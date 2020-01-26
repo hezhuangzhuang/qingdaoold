@@ -1,0 +1,51 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+
+buildscript {
+
+    repositories {
+        google()
+
+        jcenter()
+
+        //华为推送
+        maven {url 'http://developer.huawei.com/repo/'}
+    }
+
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
+        classpath 'com.github.dcendents:android-maven-plugin:1.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' // add plugin
+
+//        //MobSDK推送服务
+//        classpath "com.mob.sdk:MobSDK:2018.0319.1724"
+
+        //华为推送
+        classpath 'com.huawei.agconnect:agcp:1.0.0.300'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://jitpack.io"
+        }
+
+        maven {
+            url "https://maven.google.com"
+        }
+
+        //华为推送
+        maven {url 'http://developer.huawei.com/repo/'}
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

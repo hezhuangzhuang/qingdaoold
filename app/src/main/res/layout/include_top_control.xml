@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_top_control"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/shape_gradient_conf_bg_top"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_right_operate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@mipmap/ic_close_all_mic"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="@dimen/statusbar_view_height"
+        android:layout_alignTop="@+id/iv_one_key_close_mic"
+        android:layout_alignBottom="@+id/iv_one_key_close_mic"
+        tools:visibility="visible"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_back_operate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="30dp"
+        android:paddingTop="@dimen/statusbar_view_height"
+        android:paddingRight="30dp"
+
+        android:src="@mipmap/icon_switch_camera"
+        android:visibility="visible"
+        tools:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/iv_one_key_close_mic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_right_operate"
+        android:paddingLeft="30dp"
+        android:paddingTop="@dimen/statusbar_view_height"
+        android:paddingRight="30dp"
+        tools:visibility="visible"
+        android:src="@mipmap/ic_open_all_mic"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_switch_conf_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_one_key_close_mic"
+        android:paddingLeft="30dp"
+        android:paddingTop="@dimen/statusbar_view_height"
+        android:paddingRight="30dp"
+        tools:visibility="visible"
+        android:src="@mipmap/ic_discuss_open"
+        android:visibility="gone" />
+
+</RelativeLayout>

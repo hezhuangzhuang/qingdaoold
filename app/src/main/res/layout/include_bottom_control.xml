@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_bottom_control"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_gradient_conf_bg_bottom"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="horizontal"
+    android:paddingBottom="20dp"
+    android:paddingTop="10dp"
+    >
+
+    <TextView
+        android:id="@+id/tv_mic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_toLeftOf="@id/tv_hang_up"
+        android:drawablePadding="8dp"
+        android:drawableTop="@mipmap/icon_mic"
+        android:gravity="center"
+        android:text="麦克风"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/tv_hang_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:drawableTop="@mipmap/icon_hang_up"
+        android:gravity="center"
+        android:text="挂断"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_mute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="54dp"
+        android:layout_toRightOf="@id/tv_hang_up"
+        android:drawablePadding="8dp"
+        android:drawableTop="@mipmap/icon_unmute"
+        android:gravity="center"
+        android:text="静音"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="visible"/>
+
+</LinearLayout>

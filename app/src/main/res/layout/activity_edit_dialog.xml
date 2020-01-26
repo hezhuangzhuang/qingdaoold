@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_dialog_bg"
+    tools:context="com.zxwl.frame.activity.EditDialogActivity"
+    >
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改群聊名称"
+        android:textColor="#666666"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_et_join_bg"
+        android:maxLength="10"
+        android:padding="15dp"
+        android:hint="请输入群聊名称"
+        tools:text="XXX发起的群聊123123123123123121231233"
+        android:textColor="#333333"
+        android:textColorHint="#66333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/iv_clear_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:src="@mipmap/ic_clear_text"
+        app:layout_constraintBottom_toBottomOf="@id/et_content"
+        app:layout_constraintRight_toRightOf="@+id/et_content"
+        app:layout_constraintTop_toTopOf="@id/et_content" />
+
+    <android.support.constraint.Group
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="bt_cancle,bt_confirm" />
+
+
+    <TextView
+        android:id="@+id/bt_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_bt_server_bg"
+        android:text="确定"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/et_content"
+        app:layout_constraintTop_toBottomOf="@+id/et_content"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <TextView
+        android:id="@+id/bt_cancle"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_bt_cancel_bg"
+        android:text="取消"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#666666"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/et_content"
+        app:layout_constraintTop_toBottomOf="@+id/et_content"
+        app:layout_constraintWidth_percent="0.4" />
+
+</android.support.constraint.ConstraintLayout>

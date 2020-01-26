@@ -1,0 +1,153 @@
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zxwl.frame.fragment.ConfFragment">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/common_title_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@mipmap/ic_create_conf_bg"
+        app:layout_constraintTop_toBottomOf="@id/include">
+
+        <ImageView
+            android:id="@+id/iv_create_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_create_conf_lable"/>
+
+        <TextView
+            android:id="@+id/tv_create_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_create_lable"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="4dp"
+            android:text="发起会议"
+            android:textColor="@color/color_FEFEFE"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_create_lable"
+            android:layout_alignLeft="@id/tv_create_lable"
+            android:layout_below="@id/tv_create_lable"
+            android:gravity="center_vertical"
+            android:text="发起会议请选这里 >>"
+            android:textColor="@color/color_FEFEFE"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="35dp"
+        android:background="@mipmap/ic_join_conf_bg"
+        app:layout_constraintTop_toBottomOf="@id/rl_create">
+
+        <ImageView
+            android:id="@+id/iv_join_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_join_conf_lable"/>
+
+        <TextView
+            android:id="@+id/tv_join_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_join_lable"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="4dp"
+            android:text="加入会议"
+            android:textColor="@color/color_FEFEFE"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_join_lable"
+            android:layout_alignLeft="@id/tv_join_lable"
+            android:layout_below="@id/tv_join_lable"
+            android:gravity="center_vertical"
+            android:text="加入会议请选这里 >>"
+            android:textColor="@color/color_FEFEFE"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_my_conf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="35dp"
+        android:background="@mipmap/ic_my_conf_bg"
+        app:layout_constraintTop_toBottomOf="@id/rl_join">
+
+        <ImageView
+            android:id="@+id/iv_my_conf_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_my_conf_lable"/>
+
+        <TextView
+            android:id="@+id/tv_my_conf_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_my_conf_lable"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="4dp"
+            android:text="我的会议"
+            android:textColor="@color/color_FEFEFE"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_my_conf_lable"
+            android:layout_alignLeft="@id/tv_my_conf_lable"
+            android:layout_below="@id/tv_my_conf_lable"
+            android:gravity="center_vertical"
+            android:text="我的会议请选这里 >>"
+            android:textColor="@color/color_FEFEFE"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F6F6F6"
+    android:orientation="vertical"
+    tools:context="com.zxwl.frame.activity.MemberDetailsActivity">
+
+    <include
+        layout="@layout/common_title_layout"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--//TODO:1121修改代码-->
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_personal_head_one"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:layout_marginTop="9dp"
+            android:textColor="@color/color_333"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="哈哈哈"/>
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textColor="@color/color_999"
+            android:textSize="14sp"
+            tools:text="哈哈哈"/>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fl_send_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@mipmap/ic_send_msg"
+            android:drawablePadding="12dp"
+            android:gravity="center_vertical"
+            android:text="发消息"
+            android:textColor="@color/color_333"
+            android:textSize="15sp"/>
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+
+        android:background="@color/color_eee"/>
+    <FrameLayout
+        android:id="@+id/fl_send_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@mipmap/ic_send_video"
+            android:drawablePadding="12dp"
+            android:gravity="center_vertical"
+            android:text="视频通话"
+            android:textColor="@color/color_333"
+            android:textSize="15sp"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_send_audio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@mipmap/ic_send_audio"
+            android:drawablePadding="12dp"
+            android:gravity="center_vertical"
+            android:text="音频通话"
+            android:textColor="@color/color_333"
+            android:textSize="15sp"/>
+
+    </FrameLayout>
+</LinearLayout>

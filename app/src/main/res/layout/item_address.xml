@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="24dp"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
+        android:src="@mipmap/ic_no_login_select"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/iv_head_portrait"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_check"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/iv_louder"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@id/iv_louder"
+        android:layout_toRightOf="@id/iv_head_portrait"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="名称"
+        android:textColor="#333"/>
+
+    <View
+        android:id="@+id/view_split"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/iv_check"
+        android:background="@color/color_444"/>
+
+</RelativeLayout>

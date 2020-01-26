@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_message"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:src="@mipmap/iv_head"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/iv_head"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/color_B8B8B8"
+        android:textSize="12sp"
+        tools:text="2019/05/10"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_head"
+        android:layout_toLeftOf="@id/tv_time"
+        android:layout_toRightOf="@id/iv_head"
+        android:ellipsize="end"
+        android:paddingRight="8dp"
+        android:singleLine="true"
+        android:textColor="@color/color_333"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        tools:text="标题"/>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_toLeftOf="@id/tv_time"
+        android:layout_toRightOf="@id/iv_head"
+        android:ellipsize="end"
+        android:paddingRight="8dp"
+        android:singleLine="true"
+        android:textColor="@color/color_999"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        tools:text="标题"/>
+
+    <View
+        android:id="@+id/iv_un_read"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/tv_message"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"
+        android:background="@drawable/shape_bg_msg_unread"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_eee"/>
+
+</RelativeLayout>

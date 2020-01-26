@@ -1,0 +1,215 @@
+apply plugin: 'com.android.application'
+//数据库
+apply plugin: 'org.greenrobot.greendao'
+
+//推送
+//apply plugin: 'com.mob.sdk'
+
+//华为推送
+apply plugin: 'com.huawei.agconnect'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+
+        applicationId "com.zxwl.imdemo"
+        versionCode 8
+        versionName "1.0.8"
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+        //Enabling multidex support.
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword '86979731'
+            storeFile file('zxwl.jks')
+            storePassword '86979731'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+        }
+
+        release {
+            signingConfig signingConfigs.config
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            android.applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    if ("release".equals(variant.buildType.name)) {
+                        def fileName = "qingdaohuiyi_${variant.versionName}_${releaseTime()}.apk"
+                        def outFile = output.outputFile
+                        if (outFile != null && outFile.name.endsWith('.apk')) {
+                            outputFileName = fileName  //  output.outputFile 改为 outputFileName
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    compileOptions {
+        encoding "UTF-8"
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-annotations:25.1.0'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    greendao {
+        //版本信息
+        schemaVersion 1
+
+        /**
+         * 输出dao的数据库操作实体类文件夹（相对路径 包名+自定义路径名称，包将创建于包名的直接路径下）
+         */
+        daoPackage 'com.zxwl.frame.db'
+
+        /**
+         * greenDao实体类包文件夹
+         */
+        targetGenDir 'src/main/java'
+    }
+
+}
+
+def releaseTime() {
+    return new Date().format("yyyyMMdd_HHmm", TimeZone.getTimeZone("Asia/Shanghai"))
+}
+
+//解决冲突 同一版本
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.2.0'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    //implementation：只在内部使用了该 module，不会向外部暴露其依赖的 module 内容。
+    implementation project(':commonlibrary')
+    //权限
+    implementation 'com.lovedise:permissiongen:0.0.6'
+    //压缩图片
+    implementation 'top.zibin:Luban:1.1.8'
+    //tablayout
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    //适配器
+    implementation 'com.lqr.emoji:library:1.0.2'
+    implementation 'com.lqr.audio:library:1.0.0'
+    //    implementation 'com.dhh:websocket2:2.1.4'
+    implementation 'com.dhh:websocket:2.1.2'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+    implementation 'com.android.support:multidex:1.0.2'
+    implementation 'org.xutils:xutils:3.5.0'
+    implementation 'com.afollestad.material-dialogs:core:0.9.1.0'
+    implementation 'com.liulishuo.filedownloader:library:1.7.4'
+    implementation 'org.igniterealtime.smack:smack-android-extensions:4.1.4'
+    implementation 'org.igniterealtime.smack:smack-tcp:4.1.4'
+    //三级联动选择器
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+    //popupwindow
+    implementation 'com.github.razerdp:BasePopup:2.2.1'
+    //头部悬浮框
+    implementation 'com.github.qdxxxx:StickyHeaderDecoration:1.0.1'
+    //websocket
+    implementation 'org.java-websocket:Java-WebSocket:1.4.0'
+    //数据库
+    implementation 'org.greenrobot:greendao:3.2.2'
+    //implementation 'com.teprinciple:updateapputils:1.5.2'
+    implementation 'com.teprinciple:updateapputils:2.1.0'
+    implementation 'com.zxy.android:recovery:1.0.0'
+    //下拉刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-28'
+    //implementation 'com.orhanobut:logger:2.2.0'
+    implementation files('libs/ecslib.jar')
+    implementation files('libs/HME-Audio.jar')
+    implementation files('libs/HME-Video.jar')
+    implementation files('libs/KMC.jar')
+    implementation files('libs/TupCall.jar')
+    implementation files('libs/TupCmptService.jar')
+    implementation files('libs/TupComponent.jar')
+    implementation files('libs/TupConf.jar')
+    implementation files('libs/TupConfCtrl.jar')
+    implementation files('libs/TupContacts.jar')
+    implementation files('libs/TupCorpDirectory.jar')
+    implementation files('libs/TupService.jar')
+    implementation files('libs/TupSocket.jar')
+    implementation 'com.github.markzhai:blockcanary-android:1.5.0'
+    // 仅在debug包启用BlockCanary进行卡顿监控和提示的话，可以这么用
+    //debugImplementation 'com.github.markzhai:blockcanary-android:1.5.0'
+    //releaseImplementation 'com.github.markzhai:blockcanary-no-op:1.5.0'
+
+    //小米推送
+    implementation files('libs/MiPush_SDK_Client_3_7_2.jar')
+
+    //华为推送
+    implementation 'com.huawei.hms:push:3.0.3.301'
+}
+
+//推送
+//MobSDK {
+//    appKey "2dbaf16abea02"
+//    appSecret "d281d2f1b7261a1811ce8e8e765f0234"
+//
+//    MobPush {
+//        devInfo {
+//            XIAOMI {
+//                appId "2882303761518298983"
+//                appKey "5551829811983"
+//            }
+//        }
+//    }
+//}
+
+//configurations.all {
+////    exclude group: 'com.mob.push.plugins', module: 'huawei'                              //屏蔽MobPush提供的华为厂商包
+////    exclude group: 'com.mob.push.plugins', module: 'meizu'                               //屏蔽MobPush提供的魅族厂商包
+//    exclude group: 'com.mob.push.plugins', module: 'xiaomi'                             //屏蔽MobPush提供的小米厂商包
+////    exclude group: 'com.mob.push.plugins', module: 'vivo'                                 //屏蔽MobPush提供的vivo厂商包
+////    exclude group: 'com.mob.push.plugins', module: 'oppo'                               //屏蔽MobPush提供的oppo厂商包
+////    exclude group: 'com.google.firebase', module: 'firebase-messaging'          //屏蔽MobPush提供的FCM厂商包
+//}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/view_speaceHolder"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="#f6f6f6" />
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_speaceHolder"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/ic_conf_more" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_join"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/view_space"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginRight="14dp"-->
+<!--        android:drawableLeft="@mipmap/ic_join"-->
+<!--        android:drawablePadding="7dp"-->
+<!--        android:text="加入"-->
+<!--        android:visibility="gone"-->
+<!--        android:textColor="#418AD5"-->
+<!--        android:textSize="15sp"-->
+<!--        android:textStyle="bold" />-->
+
+    <TextView
+        android:id="@+id/tv_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_speaceHolder"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        android:drawableLeft="@mipmap/ic_joinconf"
+        android:drawablePadding="7dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_conf_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_speaceHolder"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/tv_join"
+        android:layout_toRightOf="@id/iv_img"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/color_333"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        tools:text="技术中心年中总结报告" />
+
+    <TextView
+        android:id="@+id/tv_originator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_conf_name"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iv_img"
+        android:text="999"
+        android:textColor="@color/color_999"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_originator"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iv_img"
+        android:drawableLeft="@mipmap/ic_time"
+        android:drawablePadding="6dp"
+        android:text="999"
+        android:textColor="@color/color_666"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_attendee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iv_img"
+        android:drawableLeft="@mipmap/ic_attendee"
+        android:drawablePadding="6dp"
+        android:text="999"
+        android:textColor="@color/color_666"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_join_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_attendee"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iv_img"
+        android:drawableLeft="@mipmap/ic_join_code"
+        android:drawablePadding="3dp"
+        android:text="999"
+        android:layout_marginBottom="18dp"
+        android:textColor="@color/color_666"
+        android:textSize="13sp" />
+
+</RelativeLayout>

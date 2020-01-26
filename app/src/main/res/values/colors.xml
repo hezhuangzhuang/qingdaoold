@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="main_color">#666666</color>
+
+    <color name="color_666">#666</color>
+    <color name="color_bbb">#bbb</color>
+    <color name="color_ddd">#ddd</color>
+    <color name="color_1AA76B">#1AA76B</color>
+    <color name="color_B8B8B8">#B8B8B8</color>
+    <color name="color_eee">#EEEEEE</color>
+    <color name="color_418AD6">#418AD6</color>
+    <color name="color_F0F0F0">#F0F0F0</color>
+    <color name="color_E5E5E5">#E5E5E5</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_418AD5">#418AD5</color>
+    <color name="color_F6F6F6">#F6F6F6</color>
+    <color name="color_red">#ff0000</color>
+
+
+
+
+
+
+
+
+
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <!--<color name="main_color">#666666</color>-->
+    <color name="black">#000</color>
+    <color name="white">#FFF</color>
+
+    <color name="gray">#808080</color><!--灰色 -->
+    <color name="right_operate_color">#3181f0</color>
+    <color name="tran">#00ffffff</color><!--透明-->
+    <color name="timepicker_dialog_bg">#ffffff</color><!--透明-->
+
+    <color name="conf_split">#323538</color><!--会控界面的分割线-->
+    <color name="conf_add_attend_text">#999999</color><!--会控界面的添加参会人的文字颜色-->
+
+    <color name="ffffff15">#15ffffff</color>
+
+    <color name="color_548ddf">#548ddf</color>
+
+    <color name="white_60">#60FFFFFF</color>
+
+    <color name="color_999">#999</color>
+    <color name="color_444">#444</color>
+    <color name="color_333">#333333</color>
+
+    <color name="graybg">#fff6f6f6</color>
+    <color name="color_87BEF5">#87BEF5</color>
+    <color name="color_227CD2">#227CD2</color>
+    <color name="color_328ce8">#328CE8</color>
+    <color name="color_FEFEFE">#FEFEFE</color>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item android:drawable="@mipmap/ic_launch_image_text"/>-->
+
+    <!--<item-->
+        <!--&gt;-->
+        <!--<bitmap-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:src="@mipmap/ic_launch_text"/>-->
+    <!--</item>-->
+
+    <item android:drawable="@mipmap/ic_launch_bg"/>
+
+    <!--<item>-->
+        <!--<bitmap-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:src="@mipmap/ic_launch_text"/>-->
+    <!--</item>-->
+
+</layer-list>

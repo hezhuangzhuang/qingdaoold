@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <!--兼容Android 6.0以下的显示方式-->
+            <item android:gravity="bottom|center_horizontal" android:top="38dp" android:left="12dp" android:right="12dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#418AD5" />
+                    <size android:width="30dp"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <!--    <item android:state_checked="true">-->
+    <!--        <layer-list>-->
+    <!--            <item android:gravity="bottom|center_horizontal"-->
+    <!--                android:height="2dp"-->
+    <!--                android:width="30dp">-->
+    <!--                <shape android:shape="rectangle">-->
+    <!--                    <solid android:color="#418AD5" />-->
+    <!--                </shape>-->
+    <!--            </item>-->
+    <!--        </layer-list>-->
+    <!--    </item>-->
+</selector>

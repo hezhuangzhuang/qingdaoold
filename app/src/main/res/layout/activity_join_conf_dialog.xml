@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_dialog_bg"
+    android:padding="20dp"
+    tools:context="com.zxwl.frame.activity.JoinConfDialogActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入会议接入码"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_accessCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:padding="15dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_et_join_bg"
+        android:hint="在此输入会议接入码"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:inputType="number"
+        android:textStyle="bold"
+        android:textColorHint="#66333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <android.support.constraint.Group
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="bt_cancle,bt_confirm" />
+
+
+    <Button
+        android:id="@+id/bt_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/shape_bt_server_bg"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_accessCode"
+        app:layout_constraintTop_toBottomOf="@+id/et_accessCode"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/bt_cancle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/shape_bt_cancel_bg"
+        android:text="取消"
+        android:textColor="#666666"
+        android:textSize="16sp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintStart_toStartOf="@+id/et_accessCode"
+        app:layout_constraintTop_toBottomOf="@+id/et_accessCode"
+        app:layout_constraintWidth_percent="0.4" />
+
+</android.support.constraint.ConstraintLayout>

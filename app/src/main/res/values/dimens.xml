@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="statusbar_view_height">20dp</dimen>
+
+    <dimen name="toolbar_margin_top">25dp</dimen>
+    <dimen name="statusbar_view_height_plus">30dp</dimen>
+
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_top_radius_white_10dp"
+    >
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="10dp"
+        android:src="@mipmap/ic_conf_3"/>
+
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_conf_name"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/tv_conf_name"
+        android:drawablePadding="7dp"
+        android:textSize="13sp"
+        android:textColor="@color/color_418AD6"
+        android:paddingRight="12dp"
+        android:text="收起"
+        />
+
+    <TextView
+        android:id="@+id/tv_conf_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/tv_close"
+        android:layout_toRightOf="@id/iv_img"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_333"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        tools:text="技术中心年中总结报告技术中心年中总结报告"/>
+
+    <TextView
+        android:id="@+id/tv_originator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_conf_name"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iv_img"
+        android:text="999"
+        android:textColor="@color/color_999"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_originator"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iv_img"
+        android:drawableLeft="@mipmap/ic_time"
+        android:drawablePadding="6dp"
+        android:text="999"
+        android:textColor="@color/color_666"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/tv_attendee_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iv_img"
+        android:drawableStart="@mipmap/ic_attendee"/>
+
+    <TextView
+        android:id="@+id/tv_attendee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_attendee_lable"
+        android:layout_below="@id/tv_time"
+        android:layout_marginBottom="18dp"
+        android:paddingRight="12dp"
+        android:layout_toRightOf="@id/tv_attendee_lable"
+        android:drawablePadding="6dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3dp"
+        android:textColor="@color/color_666"
+        android:textSize="13sp"
+        tools:text="drawablePaddingdrawablePaddingdrawablePaddingdrawablePaddingdrawablePaddingdrawablePaddingdrawablePaddingdrawablePadding"/>
+
+</RelativeLayout>

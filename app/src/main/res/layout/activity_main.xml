@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_backCall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:background="#0F0"
+        android:gravity="center"
+        android:text="返回通话"/>
+
+    <TextView
+        android:id="@+id/tv_reconnect"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:background="#F00"
+        android:gravity="center"
+        android:text="聊天服务已断线，点击重连"/>
+
+    <FrameLayout
+        android:id="@+id/fl_change"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:background="@color/color_eee"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#ffffff"
+        app:tl_iconHeight="25dp"
+        app:tl_iconWidth="25dp"
+        app:tl_textSelectColor="#418AD5"
+        app:tl_textUnselectColor="#666666"
+        app:tl_textsize="11sp"
+        app:tl_underline_height="0dp"/>
+    <!--app:tl_iconMargin="-2dp"-->
+</LinearLayout>
